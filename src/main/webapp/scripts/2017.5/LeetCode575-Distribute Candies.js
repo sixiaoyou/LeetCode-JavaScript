@@ -30,5 +30,5 @@ The length of the given array is in range [2, 10,000], and will be even.
  * @return {number}
  */
 var distributeCandies = function(candies) {
-    return Math.max(candies.length/2,new Set(candies).size);
+    return Math.min(candies.length/2,new Set(candies).size);
 };
