@@ -41,7 +41,6 @@ function test(s,t) {
         }
         for (var j = 0; j < 26; j++) {
                 if (arrayS[j] != arrayT[j]) {
-                    document.write(" "+arrayS[j]+" "+arrayT[j]+"<br>");
                     return false;
                 }
             }
