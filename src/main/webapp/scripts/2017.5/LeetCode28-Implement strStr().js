@@ -1,5 +1,8 @@
 /**
- LeetCode 28:Implement strStr()
+ LeetCode28:Implement strStr()
+ Implement strStr().
+
+ Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
  * Created by You on 2017/5/17.
  */
 /**
@@ -19,7 +22,7 @@ var strStrV2 = function(haystack, needle) {
     }
     for(var i=0;i<m;i++){
         var count=0;
-        for(var j=0;j<n&&i+j<m;j++){
+        for(var j=0;j<ns&&i+j<m;j++){
             if(haystack[i+j]!=needle[j]){
                 break;
             }else{
