@@ -14,6 +14,7 @@ var strStrV1 = function(haystack, needle) {
     return haystack.indexOf(needle);
 };
 
+//【极客学院版】实现细节清晰,非考察Api的调用，但TLE。
 var strStrV2 = function(haystack, needle) {
     var m = haystack.length;
     var n = needle.length;
