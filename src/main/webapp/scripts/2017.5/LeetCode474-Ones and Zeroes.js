@@ -1,4 +1,7 @@
 /**
+ * Created by You on 2017/5/20.
+ */
+/**
  * @param {string[]} strs
  * @param {number} m
  * @param {number} n
@@ -13,9 +16,10 @@ function count(s){
             array[1]+=1;
         }
     }
+    return array;
 }
 
-function zeros(strs, m, n) {
+var findMaxForm = function(strs, m, n) {
     var array = [0,0]
     var dp =new Array();
     for(var i=0;i<=m;i++){
@@ -34,5 +38,3 @@ function zeros(strs, m, n) {
     }
     return dp[m][n];
 };
-
-console.log(["10","0001","111001","1","0"],5,3)
