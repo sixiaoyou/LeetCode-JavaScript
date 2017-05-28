@@ -25,21 +25,25 @@
  * @return {ListNode}
  */
 var partition = function(head, x) {
+    if(head==null||head.next==null){
+        return head;
+    }
     var left = new ListNode(0);
     var right = new ListNode(0);
     var p1 = left;
     var p2 = right;
     while(head!=null){
         if(head.val<x){
-            p1.next = new ListNode(head.val);
+            p1.next = head;
             p1 = p1.next;
         }else{
-            p2.next = new ListNode(head.val);
+            p2.next = head;
             p2 = p2.next;
         }
         head = head.next;
     }
     p1.next =right.next;
+    p2.next = null;
     return left.next;
 
 };
