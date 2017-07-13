@@ -34,7 +34,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-
+// #【网友实现】:http://bookshadow.com/weblog/2017/05/28/leetcode-array-nesting/
 function Search(nums,idx){
     var count=0;
     while(nums[idx]>=0){
