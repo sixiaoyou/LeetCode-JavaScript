@@ -24,7 +24,7 @@ function subReverseStr(s,s1,start,end){
     return s1;
 }
 
-var reverseStr = function(s, k) {
+var reverseStrV1 = function(s, k) {
     var s1 = ""
     var size = s.length;
     if(k==1){
@@ -52,5 +52,29 @@ var reverseStr = function(s, k) {
         return s1;
 
     }
+
+};
+
+function subReverseStr(s,ans,start,end,size){
+    if(end>size){
+        end = size;
+    }
+    for(var i = end-1;i>=start;i--){
+        ans+=s[i];
+    }
+    return ans;
+}
+
+
+var reverseStrV2 = function(s, k) {
+    var ans = "";
+    var size = s.length;
+    var ans = "";
+    var round = Math.ceil(size/2*k);
+    for(var i = 0;i<round;i++){
+        ans=subReverseStr(s,ans,i*2*k,i*2*k+k,size);
+        ans+=s.substring(i*2*k+k,(i+1)*2*k);
+    }
+    return ans;
 
 };
